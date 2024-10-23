@@ -1,13 +1,13 @@
-<div class="main flex flex-col">
+<div class="main flex flex-col min-h-screen">
   <div class="navbar w-full fixed" style="z-index: 999;">
     <app-navbar></app-navbar>
   </div>
 
   <div class="flex flex-col mt-[navbar-height]">
-    <section class="carousel w-full h-screen relative">
+    <section class="w-full min-h-screen">
       <app-jumbotron></app-jumbotron>
       <div class="w-full flex justify-center items-center p-8">
-        <div class="grid grid-cols-8 gap-8">
+        <div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8">
           @for (item of imagenes; track $index) {
             <div class="w-44 h-44 border border-gray-200 bg-white rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <picture class="flex justify-center w-full h-full">
@@ -23,7 +23,7 @@
       </div>
     </section>
 
-    <section class="content flex-1">
+    <section class="w-full">
       <div class="p-4">
         <div class="p-4 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
           <div class="mb-4">
@@ -32,6 +32,7 @@
         </div>
       </div>
     </section>
+
     <footer class="bg-gray-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
